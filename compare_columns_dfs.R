@@ -8,7 +8,7 @@ compare_columns_dfs <- function (
   my_df1,
   my_df2,
   vars  # a single string or string vector if comparing several columns
-) {
+  ) {
 
   all_vars_attested <-
     sum(!vars %in% names(my_df1)) == 0 &
@@ -40,7 +40,6 @@ compare_columns_dfs <- function (
       ))
       cat("Namely:\n", missing, "\n", sep = "")
     }
-    # cat("\n")
   }
   # Make all possible comparisons
   for (myvar in vars) {
